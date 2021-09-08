@@ -1,0 +1,4 @@
+#!/bin/sh
+# Parameters: $1 -> m; field size is 2^m
+
+gcc -march=native -mtune=native -Wall -I. -o p polys-$1.c ../gf.c ../rng.c -lcrypto -ldl -lm -g

@@ -1,0 +1,10 @@
+#!/bin/sh
+# Parameters: $1 -> m; field size is 2^m
+
+BITS=24
+if [ $1 -lt 17 ]
+then
+	BITS=16
+fi
+
+gcc -march=native -mtune=native -Wall -I. -o main main-$BITS.c gf-$1.c root-$BITS.c rng.c amd64cpuinfo.c djbsort/uint32_sort.c djbsort/int32_sort.c -lcrypto -ldl -lm -g
