@@ -9,12 +9,12 @@ This repository implements a proposal for a constant-time probabilistic root fin
 ## Use
 
 After cloning the repository, build using `./build`. It is important to change the values in `param.h` when necessary before building.
-
 The `main` executable created expects the following parameters:
+
 `./main <polynomial> <m> <expected_degree>`
-	- `<polynomial>`: the input polynomial
-	- `<m>`: the field size of the coefficients of the input polynomial is 2^m
-	- `<expected_degree>`: the polynomial degree expected by the cryptosystem
+- `<polynomial>`: the input polynomial
+- `<m>`: the field size of the coefficients of the input polynomial is 2^m
+- `<expected_degree>`: the polynomial degree expected by the cryptosystem
 
 The output is the number of CPU cycles that the root finding algorithm took.
 
@@ -25,10 +25,10 @@ The input polynomials is a string of coefficients, in the form `c_0 c_1 c_2 ... 
 In `polynomials/` it is possible to create files with random polynomials with the script in `create_polys.sh`. The parameters are the following:
 
 `sh create_polys.sh <quantity> <m> <begin> <end>`
-	- `quantity>`: the number of polynomials per file (one file for each degree)
-	- `<m>`: the field size of the coefficients of the polynomials is 2^m
-	- `<begin>`: the value which the degree range starts
-	- `<end>`: the value which the degree range stops (inclusive)
+- `quantity>`: the number of polynomials per file (one file for each degree)
+- `<m>`: the field size of the coefficients of the polynomials is 2^m
+- `<begin>`: the value which the degree range starts
+- `<end>`: the value which the degree range stops (inclusive)
 
 
 ### Field size
