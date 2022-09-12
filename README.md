@@ -3,7 +3,7 @@
 
 ## Overview
 
-This repository implements a proposal for a constant-time probabilistic root finding algorithm. It is a work in progress and it is not recommended to be used in a production environment. 
+This repository implements a proposal for a constant-time probabilistic root finding algorithm [1]. It is a work in progress and it is not recommended to be used in a production environment. 
 
 
 ## Use
@@ -34,3 +34,7 @@ In `polynomials/` it is possible to create files with random polynomials with th
 ### Field size
 
 Field sizes up to 2^24 are supported, but only 2^m, m =[13,16,18,20] are implemented. In order to use bigger sizes (up to 2^32), files `gf-size.c` and `root-32.c` must be created. In `root-32.c`it is important to change the creation of the random coefficient and in `gf-size.c` it is important to adapt methods `gf_mul` and `gf_frac`.
+
+### References
+
+[1] MARCHIORI, Dúnia; CUSTÓDIO, Ricardo; PANARIO, Daniel; MOURA, Lucia. Towards constant-time probabilistic root finding for code-based cryptography. In: SIMPÓSIO BRASILEIRO DE SEGURANÇA DA INFORMAÇÃO E DE SISTEMAS COMPUTACIONAIS (SBSEG), 21. , 2021, Belém. Anais [...]. Porto Alegre: Sociedade Brasileira de Computação, 2021 . p. 155-168. DOI: https://doi.org/10.5753/sbseg.2021.17313.
